@@ -1,17 +1,34 @@
-# adv_project
+# 🧠 DevQuiz
 
-A new Flutter project.
+A Flutter-based interactive quiz application with explanations and score tracking.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- Multiple choice quiz system
+- Instant answer feedback
+- Detailed explanations for each question
+- Final score calculation
+- Clean and responsive UI
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Built With
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- Dart
+- Material Design
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Screenshots
+
+
+## 🎯 Purpose
+
+This project was built to practice Flutter fundamentals including:
+- Stateful widgets
+- setState management
+- UI building with widgets
+- Navigation and layout structure
+
+## ▶️ Getting Started
+
+1. Clone the repo
+```bash
+git clone https://github.com/vl-Arafat/DevQuiz.git
