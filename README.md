@@ -16,6 +16,15 @@ A Flutter-based interactive quiz application with explanations and score trackin
 - Dart
 - Material Design
 
+## 📂 Project Structure
+lib/
+ ├── main.dart
+ ├── homepage.dart
+ ├── quiz_screen.dart
+ ├── result_screen.dart
+assets/
+ ├── images/
+
 ## 📱 Screenshots
 
 
