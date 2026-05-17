@@ -1,4 +1,4 @@
-# adv_project
+# DevQuiz
 
 A new Flutter project.
 
