@@ -20,14 +20,22 @@ class _Homepage extends State<Homepage> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset('assets/images/quiz-logo.png', width: 200),
-        const SizedBox(height: 40),
-        TextButton(onPressed: startQuiz,
-        style: TextButton.styleFrom(
-        foregroundColor: Colors.white,
-        textStyle: const TextStyle(fontSize: 18),
+        Image.asset('assets/images/quiz-logo.png', width: 300),
+        const SizedBox(height: 80),
+        const Text('Learn Flutter',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 24,
+            ),
         ),
-        child : const Text("-> Start Quiz")),
+        const SizedBox(height : 30),
+        OutlinedButton.icon(onPressed: startQuiz,
+         style: OutlinedButton.styleFrom(
+          foregroundColor: Colors.white,
+         ),
+           icon : Icon(Icons.arrow_right_alt),
+           label: Text('Start Quiz'),
+         ),
 
       ],
 
