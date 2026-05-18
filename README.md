@@ -21,8 +21,8 @@ A Flutter-based interactive quiz application with explanations and score trackin
 📁 lib/
 ├── 📄 main.dart
 ├── 📄 homepage.dart
-├── 📄 quiz_screen.dart
-├── 📄 result_screen.dart
+├── 📄 quiz.dart
+├── 📄 question_screen.dart
 
 📁 assets/
 └── 📁 images/
