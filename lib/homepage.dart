@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+  const Homepage(this.startQuiz,{super.key});
+  final void Function() startQuiz;
   @override
   State<Homepage> createState() {
     return _Homepage();
@@ -9,11 +10,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _Homepage extends State<Homepage> {
-
-  void startQuiz(){
-
-  }
-
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -22,23 +19,18 @@ class _Homepage extends State<Homepage> {
       children: [
         Image.asset('assets/images/quiz-logo.png', width: 300),
         const SizedBox(height: 80),
-        const Text('Learn Flutter',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 24,
-            ),
+        const Text(
+          'Learn Flutter with AL',
+          style: TextStyle(color: Colors.white, fontSize: 24),
         ),
-        const SizedBox(height : 30),
-        OutlinedButton.icon(onPressed: startQuiz,
-         style: OutlinedButton.styleFrom(
-          foregroundColor: Colors.white,
-         ),
-           icon : Icon(Icons.arrow_right_alt),
-           label: Text('Start Quiz'),
-         ),
-
+        const SizedBox(height: 30),
+        OutlinedButton.icon(
+          onPressed: widget.startQuiz,
+          style: OutlinedButton.styleFrom(foregroundColor: Colors.white),
+          icon: Icon(Icons.arrow_right_alt),
+          label: Text('Start Quiz'),
+        ),
       ],
-
     );
   }
 }
