@@ -1,3 +1,4 @@
+import 'package:devquiz/data/questions.dart';
 import 'package:devquiz/question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:devquiz/homepage.dart';
@@ -15,7 +16,19 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
+  final List<String> selectedAnswers = [];
   Widget? activeScreen;
+
+  void chooseAnswer(String answer) {
+    selectedAnswers.add(answer);
+
+    if (selectedAnswers.length == questions.length) {
+      setState(() {
+       selectedAnswers.clear();
+      activeScreen = Homepage(switchScreen);
+      });
+    }
+  }
 
   @override
   void initState() {
@@ -25,7 +38,7 @@ class _QuizState extends State<Quiz> {
 
   void switchScreen() {
     setState(() {
-      activeScreen = const QuestionScreen();
+      activeScreen = QuestionScreen(onSelectAnswer: chooseAnswer);
     });
   }
 
@@ -44,9 +57,7 @@ class _QuizState extends State<Quiz> {
               end: endAl,
             ),
           ),
-          child: Center(
-            child : activeScreen,
-          ),
+          child: Center(child: activeScreen),
         ),
       ),
     );

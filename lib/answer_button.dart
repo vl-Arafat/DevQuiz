@@ -18,7 +18,7 @@ class AnswerButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(40),
         ),
       ),
-      child: Text(answer),
+      child: Text(answer, textAlign: TextAlign.center,),
     );
   }
 }
