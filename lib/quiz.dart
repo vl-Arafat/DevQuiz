@@ -1,4 +1,5 @@
 import 'package:devquiz/data/questions.dart';
+import 'package:devquiz/result.dart';
 import 'package:devquiz/question_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:devquiz/homepage.dart';
@@ -16,34 +17,39 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-  final List<String> selectedAnswers = [];
-  Widget? activeScreen;
+  List<String> selectedAnswers = [];
+  var activeScreen = 'homepage';
+
+  
+  void switchScreen() {
+    setState(() {
+      activeScreen = 'question_screen';
+    });
+  }
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
 
     if (selectedAnswers.length == questions.length) {
       setState(() {
-       selectedAnswers.clear();
-      activeScreen = Homepage(switchScreen);
+        selectedAnswers = [];
+        activeScreen = 'result';
       });
     }
   }
 
   @override
-  void initState() {
-    activeScreen = Homepage(switchScreen);
-    super.initState();
-  }
+  Widget build(context) {
+    Widget screenWidget = Homepage(switchScreen);
 
-  void switchScreen() {
-    setState(() {
-      activeScreen = QuestionScreen(onSelectAnswer: chooseAnswer);
-    });
-  }
+    if (activeScreen == 'question_screen') {
+      screenWidget = QuestionScreen(onSelectAnswer: chooseAnswer);
+    }
 
-  @override
-  Widget build(BuildContext context) {
+    if (activeScreen == 'result') {
+      screenWidget = Result(chosenAnswers: selectedAnswers,);
+    }
+
     return MaterialApp(
       home: Scaffold(
         body: Container(
@@ -57,7 +63,9 @@ class _QuizState extends State<Quiz> {
               end: endAl,
             ),
           ),
-          child: Center(child: activeScreen),
+          child: Center(
+            child: screenWidget,
+          ),
         ),
       ),
     );
