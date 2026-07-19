@@ -59,8 +59,8 @@ assets/
 
 <p align="center">
   <img src="Screenshots/home.png" width="220"/>
-  <img src="Screenshots/question%201.png" width="220"/>
-  <img src="Screenshots/question%202.png" width="220"/>
+  <img src="Screenshots/question1.png" width="220"/>
+  <img src="Screenshots/question2.png" width="220"/>
   <img src="Screenshots/result.png" width="220"/>
 </p>
 
