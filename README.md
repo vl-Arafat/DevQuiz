@@ -128,7 +128,7 @@ flutter run
 
 ## 👨‍💻 Author
 
-**Arafat**
+**Al Arafat**
 
 - GitHub: https://github.com/vl-Arafat
 
